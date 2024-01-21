@@ -1,0 +1,242 @@
+/************************************************************************/
+/* RESET  */
+/***********************************************************************/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+/***********************************************************************/
+
+.body{
+  font-family: 'Lato', sans-serif;
+}
+
+.brown-framed{
+  width : 100%;
+  height : 100vh;
+  display : flex;
+  justify-content : center;
+  align-items: center;
+  position: relative;
+}
+
+img{
+  display : inline-block;
+  width : 700px;
+  height : 500px;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.mat{
+  width: 660px; 
+  height : 460px;
+  background-color: white;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  
+  position: absolute;
+  z-index: 2;
+}
+
+button{
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: larger;
+  padding-right: 1rem;
+}
+
+button:hover{
+  background-color: rgb(235, 211, 211);
+}
+
+.bi-plus-circle, .bi-arrow-repeat, .bi-box-arrow-in-down{
+  margin-right : 0.6rem!important;
+  margin-left : 0.6rem!important;
+}  
+
+.player__label{
+  font-size: 2rem;
+} 
+
+.bi{
+  color: rgb(235,76,77);
+}
+
+.bi-circle-fill{
+  font-size: 0.7rem;
+  vertical-align: middle!important;
+}
+
+.show{
+  opacity:1;
+}
+
+.hidden{
+  opacity:0;
+}
+
+.dice__container{
+  width:52px;
+  height:56px;
+  overflow: hidden;
+}
+
+#dice, .global-score1, .global-score2{
+  font-size: 72px;
+  font-weight: 100;
+  color:  rgb(235,76,77);
+}
+
+.fourth-row, .bottom-buttons__container{
+  height: 90px;
+}
+
+.current-score__container{
+  background-color: rgb(235,76,77);
+  width: 100px;
+  height: 70px;
+  padding : 1rem 0;
+}
+
+
+/*************************** MEDIA QUERIES *********************/
+
+@media screen and (max-width: 449px) {
+  /* mobiles */
+ 
+  img{
+    width : 250px;
+    height : 300px;
+  }
+
+  .mat{
+    width: 245px; 
+    height : 295px;
+  }
+
+  .first-row{
+    padding-bottom:6%!important; 
+  }  
+
+  button{
+    font-size:0.7rem;
+    padding-right:0.3rem;
+  }
+
+  .bi-plus-circle, .bi-arrow-repeat, .bi-box-arrow-in-down{
+    font-size: 1.1rem!important;
+    margin-right : 0.2rem!important;
+    margin-left : 0.2rem!important;
+  } 
+
+  .second-row{
+    padding-bottom : 8%!important; 
+  } 
+
+  .player__label{
+    font-size: 0.8rem;
+  } 
+
+  .bi-circle-fill{
+    font-size: 0.4rem;
+  }
+
+  .third-row{
+    padding-bottom : 10%!important; 
+  } 
+
+  .dice__container{
+    width:32px;
+    height:35px;
+  }
+
+  #dice, .global-score1, .global-score2{
+    font-size: 45px;
+  }
+
+  .fourth-row, .bottom-buttons__container{
+    height: 65px;
+  }
+
+  .current-score__container{
+    width: 60px;
+    height:40px;
+  }
+
+  .current-score__label{
+    font-size: 0.6rem!important;
+  } 
+
+  .current-score1, .current-score2{
+    font-size: 1rem!important;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 700px) {
+	/* big mobiles and tablets */
+  
+  img{
+    width : 430px;
+    height : 300px;
+  }
+
+  .mat{
+    width: 400px; 
+    height : 270px;
+  }
+
+  .first-row{
+    padding-top: 4%!important;
+    padding-bottom:2%!important; 
+  }  
+
+  .bi-plus-circle, .bi-arrow-repeat, .bi-box-arrow-in-down{
+    font-size: 1.1rem!important;
+  } 
+
+  .bi-circle-fill{
+    font-size: 0.5rem;
+  } 
+
+  .dice__container{
+    width:32px;
+    height:35px;
+  }
+
+  button{
+    font-size:0.8rem;
+  }
+
+  .player__label{
+    font-size: 1.1rem;
+  } 
+
+  #dice, .global-score1, .global-score2{
+    font-size: 45px;
+  }
+
+  .third-row{
+    padding-bottom : 5%!important; 
+  } 
+
+  .fourth-row, .bottom-buttons__container{
+    height: 60px;
+  }
+
+  .current-score__container{
+    width: 70px;
+    height:50px;
+  }
+
+  .current-score__label{
+    font-size: 0.7rem!important;
+  } 
+
+  .current-score1, .current-score2{
+    font-size: 1rem!important;
+  }
+}
