@@ -1,5 +1,7 @@
 /* eslint-disable linebreak-style */
 let ROUND = 0;
+let GLOBAL = [0, 0];
+
 let hasWon = false;
 
 function rollDice() {
@@ -111,11 +113,11 @@ function onHold() {
   if (className && (className !== 'bi-dice-1')) {
     const indexActualPlayer = whoIsPlaying();
     // display global score
-
+    GLOBAL[indexActualPlayer - 1] = GLOBAL[indexActualPlayer - 1] + ROUND;
     const globalScoreSpan = document.querySelector(`.global-score${indexActualPlayer}`);
-    globalScoreSpan.innerHTML = parseInt(globalScoreSpan.innerHTML, 10) + parseInt(ROUND, 10);
+    globalScoreSpan.innerHTML = GLOBAL[indexActualPlayer - 1];
 
-    if (globalScoreSpan.innerHTML >= 100) {
+    if (GLOBAL[indexActualPlayer - 1] >= 100) {
       setTimeout(() => {
         hasWon = true;
         const rollDiceButton = document.querySelector('.roll-dice');
@@ -146,6 +148,8 @@ function onNewGame() {
   const holdButton = document.querySelector('.hold');
 
   ROUND = 0;
+  GLOBAL = [0, 0];
+
   const className = document.getElementById('dice').classList.item(1);
   // check dice on the mat
   if (className) {
